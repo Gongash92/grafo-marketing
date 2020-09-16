@@ -24,7 +24,7 @@
     "gulp-uglifyjs": "^0.6.2",
     "imagemin-jpeg-recompress": "^5.1.0",
     "imagemin-pngquant": "^5.1.0",
-    "panini": "^1.6.3"
+    "panini": "^1.7.1"
   },
   "dependencies": {
     "animate.css": "^3.7.2",

@@ -23523,12 +23523,3 @@ input[type=number]::-webkit-outer-spin-button {
   -ms-flex-align: start !important;
       align-items: flex-start !important;
 }
-
-@media (min-width: 768px) {
-  .navbar-expand-md .u-header__mega-menu-wrapper {
-    background-image: url("./../img/arrow.png");
-    background-position: 10px 75%;
-    background-repeat: no-repeat;
-    background-size: 12px;
-  }
-}
