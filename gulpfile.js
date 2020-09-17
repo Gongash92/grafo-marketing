@@ -60,7 +60,15 @@ gulp.task('compile-html', function () {
         helpers: 'src/html/',
         data: 'src/data/',
         pageLayouts: {
-          'stamparija': 'stamparija'
+          'stamparija': 'stamparija',
+          'stamparija\\proizvodi': 'stamparija',
+          'stamparija\\proizvodi\\brendiranje-objekata': 'stamparija',
+          'stamparija\\proizvodi\\flajeri': 'stamparija',
+          'stamparija\\proizvodi\\reklamne-table': 'stamparija',
+          'stamparija\\proizvodi\\svetlece-reklame': 'stamparija',
+          'stamparija\\proizvodi\\vizit-karte': 'stamparija',
+          'stamparija\\proizvodi\\zastave-jarboli': 'stamparija',
+          'stamparija\\usluge': 'stamparija',
         }
       }))
       .pipe(gulp.dest('build'));

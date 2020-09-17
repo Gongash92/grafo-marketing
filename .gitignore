@@ -7,3 +7,5 @@ html
 starter
 assets/_backup
 stamparija/_backup
+build/stamparija
+build/index.html
