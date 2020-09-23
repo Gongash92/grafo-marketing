@@ -1,0 +1,62 @@
+[
+    {
+        "id": "1",
+        "name": "Muflon-papirna nalepnica",
+        "parent_id": "0",
+        "value": "1"
+    },
+    {
+        "id": "2",
+        "name": "Konstdruk papir",
+        "parent_id": "0",
+        "value": "2"
+    },
+    {
+        "id": "3",
+        "name": "1-10",
+        "parent_id": "1",
+        "value": "90"
+    },
+    {
+        "id": "4",
+        "name": "11-100",
+        "parent_id": "1",
+        "value": "55"
+    },
+    {
+        "id": "5",
+        "name": "101-250",
+        "parent_id": "1",
+        "value": "48"
+    },
+    {
+        "id": "6",
+        "name": "251-500",
+        "parent_id": "1",
+        "value": "38"
+    },
+    {
+        "id": "7",
+        "name": "1-10",
+        "parent_id": "2",
+        "value": "100"
+    },
+    {
+        "id": "8",
+        "name": "11-100",
+        "parent_id": "2",
+        "value": "63"
+    },
+    {
+        "id": "9",
+        "name": "101-250",
+        "parent_id": "2",
+        "value": "56"
+    },
+    {
+        "id": "10",
+        "name": "251-500",
+        "parent_id": "2",
+        "value": "46"
+    }
+]
