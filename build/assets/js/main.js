@@ -178,3 +178,152 @@ $(document).ready(function () {
         calculate()
     });
 });
+
+
+let priceCards = [
+    [5.2, 6.9, 3.9, 4.7],
+    [6.9, 10.3, 5.6, 6.9],
+    [8.6, 12, 7.3, 8.6],
+    [11.6, 15.9, 9.4, 12],
+    [18, 26.5, 15.4, 22.7],
+    [31.7, 49.6, 25.7, 38.5]
+];
+
+function calculateCards() {
+    let plastifikacija = 0;
+    let tiraz = 0;
+    let papir = parseInt($('#value :selected').val());
+    let total = parseInt(document.getElementById("numberCards").value);
+    let plastik = parseInt($('#plastik :selected').val());
+    let cosak = parseFloat($('#cosak :selected').val())
+
+    if (total == 100) {
+        tiraz = 0;
+        priceRange = "100";
+        if (plastik == 1)
+            plastifikacija = 2;
+        if (cosak == 1)
+            cosak = 1.3;
+    }
+
+    else if (total == 200) {
+        tiraz = 1;
+        priceRange = "200";
+
+    }
+    else if (total == 300) {
+        tiraz = 2;
+        priceRange = "300";
+
+    }
+    else if (total == 500) {
+        tiraz = 3;
+        priceRange = "500";
+
+    }
+    else if (total == 1000) {
+        tiraz = 4;
+        priceRange = "1000";
+
+    }
+    else if (total == 2000) {
+        tiraz = 5;
+        priceRange = "2000";
+
+    }
+    let ukupno = (priceCards[tiraz][papir] + plastifikacija + cosak);
+    console.log(ukupno);
+    document.getElementById("rez").innerHTML = ukupno;
+}
+
+let priceCards2 = [
+    [5.6, 7.3, 4.3, 5.2],
+    [7.3, 10.7, 6, 7.3],
+    [9.4, 12.9, 8.2, 9.4],
+    [12.9, 16.7, 10.3, 12.9],
+    [19.7, 28.2, 15.4, 22.7],
+    [35.9, 55.6, 29, 42.8]
+];
+
+function calculateCards2() {
+    let plastifikacija = parseInt(0);
+    let lak = 0;
+    let tiraz = parseInt(0);
+    let papir = parseInt($('#value :selected').val());
+    let total = parseInt(document.getElementById("numberCards").value);
+    let plastik = parseInt($('#plastik :selected').val());
+    let cosak = parseFloat($('#cosak :selected').val());
+    let lakiranje = parseFloat($('#lak :selected').val());
+
+    if (total == 100) {
+        tiraz = 0;
+        priceRange = "100";
+        if (plastik == 1)
+            plastifikacija = 2;
+        if (cosak == 1)
+            cosak = 1.3;
+        if (lakiranje == 1)
+            lak = 0.9;
+    }
+
+    else if (total == 200) {
+        tiraz = 1;
+        priceRange = "200";
+
+    }
+    else if (total == 300) {
+        tiraz = 2;
+        priceRange = "300";
+
+    }
+    else if (total == 500) {
+        tiraz = 3;
+        priceRange = "500";
+
+    }
+    else if (total == 1000) {
+        tiraz = 4;
+        priceRange = "1000";
+
+    }
+    else if (total == 2000) {
+        tiraz = 5;
+        priceRange = "2000";
+
+    }
+    let ukupno = (priceCards2[tiraz][papir] + plastifikacija + cosak + lak);
+    console.log(ukupno);
+    document.getElementById("rez").innerHTML = ukupno;
+}
+
+// mijenjanje formule
+$('#forma').change(function () {
+    var val = parseInt($('#dimension').val(), 10);
+    switch (val) {
+        case 1:
+            calculateCards();
+            break;
+        case 2:
+            calculateCards2();
+            break;
+
+    }
+});
+
+$('#plastik').on('change', function () {
+
+    if ($(this).val() === '1') {
+        $('#lak').attr('disabled', 'disabled');
+    } else {
+        $('#lak').attr('disabled', false);
+    }
+});
+
+$('#lak').on('change', function () {
+
+    if ($(this).val() === '1') {
+        $('#plastik').attr('disabled', 'disabled');
+    } else {
+        $('#plastik').attr('disabled', false);
+    }
+});
